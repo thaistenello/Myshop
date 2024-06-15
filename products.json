@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "name": "ORNATE MIRROR",
+        "price": 800,
+        "image": "assets/big-mirror.jpg"
+    },
+    {
+        "id": 2,
+        "name": "INDUSTRIAL STOOL",
+        "price": 200,
+        "image": "assets/stool.jpg"
+    },
+    {
+        "id": 3,
+        "name": "MODERN CHAIR",
+        "price": 300,
+        "image": "assets/chair.jpg"
+    },
+    {
+        "id": 4,
+        "name": "ARMCHAIR",
+        "price": 500,
+        "image": "assets/armchair-green.jpg"
+    }
+    
+
+]

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+</head>
+<body>
+    <div id="menu-container">
+        <div class="cart">
+            <svg class="icon-cart" width="40" height="36" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path 
+                    d="M5.9987 14.6668C6.36689 14.6668 6.66536 14.3684 6.66536 14.0002C6.66536 13.632 6.36689 13.3335 5.9987 
+                    13.3335C5.63051 13.3335 5.33203 13.632 5.33203 14.0002C5.33203 14.3684 5.63051 14.6668 5.9987 14.6668Z" 
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+    
+                <path 
+                    d="M13.3346 14.6668C13.7028 14.6668 14.0013 14.3684 14.0013 14.0002C14.0013 13.632 13.7028 13.3335 13.3346 
+                    13.3335C12.9664 13.3335 12.668 13.632 12.668 14.0002C12.668 14.3684 12.9664 14.6668 13.3346 14.6668Z" 
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+    
+                <path 
+                    d="M0.667969 0.666504H3.33464L5.1213 9.59317C5.18226 9.9001 5.34924 10.1758 5.593 10.372C5.83676 10.5683 6.14177 
+                    10.6725 6.45464 10.6665H12.9346C13.2475 10.6725 13.5525 10.5683 13.7963 10.372C14.04 10.1758 14.207 9.9001 14.268 
+                    9.59317L15.3346 3.99984H4.0013" 
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+                <path 
+                     d="M2 30.5L8.25 24.25M14.5 18L8.25 24.25M8.25 24.25L14.5 30.5L2 18" 
+                    stroke="currentColor">
+                </path>
+            </svg>
+            <span>0</span>
+        </div>
+    </div>
+    <div id="main">
+        <!-- NAV -->
+        <nav>
+            <div id="nav-logo">
+                <img src="assets/logo.png" alt="">
+            </div>
+        </nav>
+
+        <!-- HOME - PAGE 1 -->
+
+        <div id="page1">
+            <div id="page1-text">
+                <h1>EXPIRE<br>AND <span>INSPIRE</span></h1>
+            </div>
+            <!-- <div id="video-bg">
+                <video autoplay muted loop>
+                    <source src="assets/back-btn.mp4" type="video/mp4">
+                </video>
+            </div> -->
+        </div>
+
+        <!-- PRODUCTS - PAGE 2 -->
+        <div id="page2" class="section">
+            <div class="listProduct">
+                <div class="item">
+                    <img src="assets/big-mirror.jpg" alt="">
+                    <h2>NAME PRODUCT</h2>
+                    <div class="price">$200</div>
+                    <button class="addCart">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cartTab">
+            <h3>CART</h3>
+            <div class="listCart">
+                <div class="item">
+                    <div class="image">
+                        <img src="assets/big-mirror.jpg" alt="">
+                    </div>
+                    <div class="name">
+                        NAME
+                    </div>
+                    <div class="quantity">
+                        <span class="minus">-</span>
+                        <span>1</span>
+                        <span class="plus">+</span>
+                    </div>
+                    <div class="totalPrice">
+                        $200
+                    </div>
+                </div>
+            </div>
+            <div class="subTotal">
+                <div class="delivery">
+                    <span class="title">DELIVERY:</span>
+                    <span class="subTitle">SHIPPING CALCULATED AT CHECK-OUT.</span>
+                </div>
+                <div class="total">
+                    <span class="title">SUBTOTAL:</span>
+                    <span class="subTitle">$100</span>
+                </div>
+            </div>
+            <div class="btn">
+                <button class="close">
+                    <img src="assets/close.png" alt="">
+                </button>
+                <button class="checkOut">CHECKOUT</button>
+            </div>
+        </div>
+
+        <!-- HOME - PAGE 1 -->
+
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
