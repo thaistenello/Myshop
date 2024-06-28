@@ -24,23 +24,24 @@ function locomotiveScroll(){
 }locomotiveScroll()
 //........................................................................
 
-let body = document.querySelector('body'); //body
-let iconCart = document.querySelector('.icon-cart'); //carrinho
-let closeCart = document.querySelector('.close'); //close btn do carrinho
-let iconCartSpan = document.querySelector('.cart span') //span num de itens
-let listCartHTML = document.querySelector('.listCart') //lista de prod. do carrinho
-let listProductsHTML = document.querySelector('.listProduct'); //cartão do produto
+let body = document.querySelector('body');
+let iconCart = document.querySelector('.icon-cart'); 
+let closeCart = document.querySelector('.close'); 
+let iconCartSpan = document.querySelector('.cart span') 
+let listCartHTML = document.querySelector('.listCart')
+let listProductsHTML = document.querySelector('.listProduct');
+
 let listProduct = [];
 let carts = [];
 
 
-//CART EVENTS
-function setupCartEvents() {
+//cart events
+function CartEvents() {
     const toggleCart = () => body.classList.toggle('showCart');
     
     iconCart.addEventListener('click', toggleCart);
     closeCart.addEventListener('click', toggleCart);
-}setupCartEvents();
+}CartEvents();
 
 
 //products cards
@@ -65,7 +66,7 @@ const addDataToHTML = () => {
     }
 }
 
-//add ao carrinho
+//add in card
 listProductsHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if(positionClick.classList.contains('addCart')){
@@ -97,22 +98,27 @@ const addCartToMemory = () => {
     localStorage.setItem('cart', JSON.stringify(carts));
 }
 
-//ENCONTRAR AS INFS DO PRODUTO
+//find products infos
 const addCartToHTML = () => {
     listCartHTML.innerHTML = '';
+
     let totalQuantity = 0;
+    let totalPrice = 0;
     
     if (carts.length > 0){
+
         carts.forEach(item => {
             totalQuantity = totalQuantity + item.quantity;
             let newItem = document.createElement('div');
             newItem.classList.add('item');
             newItem.dataset.id = item.product_id;
-            
-            
+                        
             let positionProduct = listProduct.findIndex((value) => value.id == item.product_id);
             let info = listProduct[positionProduct];
             listCartHTML.appendChild(newItem);
+
+            let itemTotalPrice = info.price * item.quantity;
+            totalPrice += itemTotalPrice;
 
             newItem.innerHTML = `
             <div class="image">
@@ -130,12 +136,24 @@ const addCartToHTML = () => {
                 </div>
 
                 <div class="totalPrice">
-                    $${info.price * item.quantity}
+                    $${itemTotalPrice}
                 </div>
             `;
-        })
-    }
+        });
+
+        // Append the subtotal
+        let subtotalValue = document.querySelector('.subTotal .total .subTitle');
+        if (subtotalValue) {
+            subtotalValue.textContent = `$${totalPrice}`;
+        }
+        } else {
+            let subtotalValue = document.querySelector('.subTotal .total .subTitle');
+            if (subtotalValue) {
+                subtotalValue.textContent = ``;
+            }
+        }
     iconCartSpan.innerText = totalQuantity;
+    addCartToMemory();
 }
 
 //+ and -, cart buttons
@@ -151,7 +169,7 @@ listCartHTML.addEventListener('click', (event) =>{
     }
 })
 
-//excluir e add itens
+//remove e add itens
 const changeQuantity = (product_id, type) => {
     let positionItemInCart = carts.findIndex((value) => value.product_id == product_id);
     if(positionItemInCart >= 0){
