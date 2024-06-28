@@ -8,7 +8,7 @@
 
 ![preview-gif](https://github.com/thaistenello/Myshop/assets/131812228/8d4a8d07-2fa5-44eb-8d15-7c630334d794)
 
-<a href="" target="_blank">
+<a href="https://myshop-drab.vercel.app/" target="_blank">
   <img src="https://placehold.jp/ffffff/350x50.png?text=Visualize%20a%20Demonstra%C3%A7%C3%A3o&css=%7B%22border-radius%22%3A%2215px%22%2C%22background%22%3A%22%20-webkit-gradient(linear%2C%20left%20top%2C%20left%20bottom%2C%20from(%23dd5538)%2C%20to(%23eb5f5c))%22%7D">
 </a>
 
@@ -66,7 +66,7 @@ Todo conteúdo de mídia utilizado provém de bancos gratuitos de imagem.</p>
 
 ![preview-gif](https://github.com/thaistenello/Myshop/assets/131812228/8d4a8d07-2fa5-44eb-8d15-7c630334d794)
 
-<a href="" target="_blank">
+<a href="https://myshop-drab.vercel.app/" target="_blank">
   <img src="https://placehold.jp/ffffff/350x50.png?text=See%20a%20Demo&css=%7B%22border-radius%22%3A%2215px%22%2C%22background%22%3A%22%20-webkit-gradient(linear%2C%20left%20top%2C%20left%20bottom%2C%20from(%23dd5538)%2C%20to(%23eb5f5c))%22%7D">
 </a>
 
